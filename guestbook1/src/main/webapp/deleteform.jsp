@@ -1,6 +1,10 @@
+<%@page import="guestbook.dao.GuestbookDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	String no = request.getParameter("no");
+	request.setCharacterEncoding("utf-8");
+	
+	String sno = request.getParameter("no");
+	String password = request.getParameter("password");
 %>
 <html>
 <head>
@@ -9,7 +13,7 @@
 </head>
 <body>
 	<form method="post" action="delete.jsp">
-	<input type='hidden' name="id" value="<%=no %>">
+	<input type='hidden' name="no" value="<%=sno %>">
 	<table>
 		<tr>
 			<td>비밀번호</td>
