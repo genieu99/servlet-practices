@@ -33,12 +33,12 @@
 		</tr>
 	</table>
 	<br>
+	<%
+		}
+	%>
 	<p>
 		<a href="form.jsp">추가메일 등록</a>
 	</p>
 	<br>
-	<%
-		}
-	%>
 </body>
 </html>
