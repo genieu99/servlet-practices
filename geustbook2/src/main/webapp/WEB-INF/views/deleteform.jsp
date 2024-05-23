@@ -12,10 +12,11 @@
 <title>방명록</title>
 </head>
 <body>
-	<form method="post" action="delete.jsp">
-	<input type='hidden' name="no" value="<%=sno %>">
-	<table>
-		<tr>
+	<form method="post" action="<%=request.getContextPath() %>/gb">
+		<input type='hidden' name="a" value="delete">
+		<input type='hidden' name="no" value="<%=sno %>">
+		<table>
+			<tr>
 			<td>비밀번호</td>
 			<td><input type="password" name="password"></td>
 			<td><input type="submit" value="확인"></td>
