@@ -19,14 +19,6 @@ public class GuestbookServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		String action = request.getParameter("a");
-		if ("".equals(action)) {
-			
-		} else if ("".equals(action)) {
-			
-		} else {
-			
-		}
-		
 		if ("add".equals(action)) {
 			String name = request.getParameter("name");
 			String password = request.getParameter("password");
@@ -44,8 +36,7 @@ public class GuestbookServlet extends HttpServlet {
 		} else if ("deleteform".equals(action)) {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/deleteform.jsp");
 			rd.forward(request, response);
-		}
-		else if ("delete".equals(action)) {
+		} else if ("delete".equals(action)) {
 			Long no = Long.parseLong(request.getParameter("no"));
 			String password = request.getParameter("password");
 			

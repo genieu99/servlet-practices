@@ -1,11 +1,4 @@
-<%@page import="guestbook.dao.GuestbookDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-	request.setCharacterEncoding("utf-8");
-	
-	String sno = request.getParameter("no");
-	String password = request.getParameter("password");
-%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,16 +6,17 @@
 </head>
 <body>
 	<form method="post" action="<%=request.getContextPath() %>/gb">
-		<input type='hidden' name="a" value="delete">
-		<input type='hidden' name="no" value="<%=sno %>">
+		<input type="hidden" name="a" value="delete">
+		<input type='hidden' name='no' value='<%=request.getParameter("no") %>'>
 		<table>
 			<tr>
-			<td>비밀번호</td>
-			<td><input type="password" name="password"></td>
-			<td><input type="submit" value="확인"></td>
-			<td><a href="<%=request.getContextPath() %>/gb">메인으로 돌아가기</a></td>
-		</tr>
-	</table>
+				<td>비밀번호</td>
+				<td><input type="password" name="password"></td>
+				<td><input type="submit" value="확인"></td>
+			</tr>
+		</table>
+		<br>
+		<a href="<%=request.getContextPath() %>/gb">메인으로 돌아가기</a>
 	</form>
 </body>
 </html>
